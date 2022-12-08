@@ -1,0 +1,546 @@
+/* Universal Styles */
+html {
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;
+}
+
+body {
+    background-color: rgb(135, 192, 187);
+    margin: 0;
+}
+
+/* Header & Nav Styles */
+
+.mobile {
+    display: none;
+}
+
+.desktop {
+    display: flex;
+    align-items: center;
+}
+
+nav {
+    text-align: center;
+    margin: 2rem 1rem;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 1.5rem;
+    letter-spacing: .1rem;
+    color: rgb(50, 71, 75);
+}
+
+.item {
+    width: 7.5rem;
+    margin: 0.5rem 0.8rem;
+    padding: 0.5rem;
+}
+
+.logo {
+    flex-grow: 10;
+    font-family: 'Playfair Display', serif;
+    color: #f2f7f6ff;;
+    font-size: 3.5rem;
+}
+
+.banner {
+    display: flex;
+    width: 100%;
+}
+
+.banner img {
+    width: 25%;
+    height: auto;
+}
+
+/* Media Queries: Nav Styles */
+
+@media only screen and (min-width: 769px) {
+    .desktop {
+        align-items: flex-end;
+    }
+
+    .item:hover {
+        color: #f2f7f6ff;
+        border-bottom: solid 1px #f2f7f6ff;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    nav.desktop {
+        display: none;
+    }
+
+    nav.mobile {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .item {
+        margin: 0 .5rem;
+    }
+
+    .logo {
+        width: 100%;
+    }
+
+    .banner {
+        flex-direction: column;
+    }
+
+    .banner img {
+        width: 100%;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    nav {
+        margin: 0.5rem 0;
+    }
+
+    nav a {
+        font-size: 1.2rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    nav.mobile {
+        margin: 0 0 0.5rem 0;
+    }
+    
+    .item {
+        margin: 0;
+    }
+
+    .mobile a {
+        font-size: 0.9rem;
+    }
+
+    .mobile a.logo {
+        font-size: 2rem;
+    }
+}
+
+/* Slogan */
+
+.slogan {
+    margin: 3rem auto;
+    width: 95%;
+}
+
+.slogan h1 {
+    font-size: 2.5rem;
+    font-weight: 400;
+    color: #fff;
+    font-family: 'Playfair Display', serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+/* Media Queries: Slogan */
+
+@media only screen and (min-width: 2560px){
+    .slogan {
+        z-index: 1;
+        position: relative;
+        bottom: 35rem;
+    }
+
+    .slogan h1 {
+        font-size: 3rem;
+        font-weight: 300;
+        color: #fff;
+        background-color: hsla(174, 36%, 64%, 0.85);
+        padding: 1rem;
+    }
+
+    main {
+        position: relative;
+        bottom: 12rem;
+    }
+}
+
+@media only screen and (min-width: 426px) and (max-width: 768px) {
+    .slogan h1 {
+        font-size: 2.187rem;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    .slogan h1 {
+        font-size: 2rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .slogan {
+        margin: 1.5rem auto;
+    }
+    
+    .slogan h1 {
+        font-size: 1.562rem;
+    }
+}
+
+/* About Us */
+
+.about-us {
+    padding: 8rem 5%;
+    height: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgb(135, 192, 187);
+    background-color: rgb(55, 100, 109);
+}
+
+.item1 {
+    font-size: 4rem;
+    font-weight: 400;
+    margin-right: 5rem;
+    text-align: end;
+    flex-shrink: 1;
+}
+
+.item2 {
+    width: 50%;
+    padding-left: 3rem;
+    border-left: solid 1px;
+    font-size: 1.5rem;
+}
+
+/* Media Queries: About us */
+@media only screen and (min-width: 769px) and (max-width: 1212px) {
+    .item1 {
+        margin-right: 2.5rem;
+        text-align: end;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .about-us {
+        flex-direction: column;
+        align-items: center;
+        padding: 3rem;
+    }
+
+    .item1 {
+        margin: 0;
+    }
+
+    .item2 {
+        border-left: 0;
+        padding-left: 0;
+        text-align: center;
+        width: 100%;
+        flex-shrink: 2;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    .item1 {
+        font-size: 2rem;
+    }
+
+    .item2 {
+        font-size: 1rem;
+    }
+}
+
+@media only screen and (max-width: 320px) {
+    .about-us {
+        padding: 2rem;
+    }
+
+    .item1 {
+        font-size: 1.5rem;
+    }
+
+    .item2 {
+        font-size: 0.875rem;
+    }
+}
+
+/* Portfolio */
+
+.portfolio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+    margin: 0 auto;
+}
+
+.portfolio > h3 {
+    margin: 2rem 0 0 0;
+    font-size: 4rem;
+    font-weight: 400;
+    color: rgb(55, 100, 109);
+    text-align: center;
+}
+
+.portfolio > h4 {
+    margin-bottom: 0.5rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 300;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.portfolio > img {
+    max-width: 45%;
+    height: auto;
+    margin: 1rem;
+}
+
+/* Media Queries: Portfolio */
+
+@media only screen and (max-width: 1440px) {
+    .portfolio {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .portfolio > img {
+        max-width: 90%;
+    }
+
+}
+
+@media only screen and (max-width: 767px) {
+    .portfolio > img {
+        max-width: 100%;
+        margin: 1% 0;
+    }
+}
+
+@media only screen and (min-width: 321px) and (max-width: 425px) {
+    .portfolio > h3 {
+        font-size: 2rem;
+    }
+
+    .portfolio > h4 {
+        font-size: 1rem;
+    }    
+}
+
+@media only screen and (max-width: 320px) {
+    .portfolio > h3 {
+        font-size: 1.5rem;
+    }
+
+    .portfolio > h4 {
+        font-size: 1rem;
+    }
+}
+
+/* Our Team */
+
+.our-team {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 5rem auto;
+    background-color: rgb(55, 100, 109);
+    color: rgb(135, 192, 187);
+}
+
+.our-team > h3 {
+    font-size: 4rem;
+    width: 100%;
+    text-align: center;
+    font-weight: 400;
+}
+
+.card {
+    margin: 2%;
+    padding: 1%;
+    text-align: center;
+}
+
+.card > h5 {
+    font-size: 2rem;
+    font-weight: 400;
+    margin-bottom: 0;
+    color: #fff;
+}
+
+.card > p {
+    font-weight: 300;
+    font-size: 1.5rem;
+    margin-top: 4%;
+}
+
+.card img {
+    object-fit: cover;
+    height: 20rem;
+    width: 20rem;
+    border-radius: 250px;
+}
+
+/* Media Queries: Our Team */
+
+@media only screen and (max-width: 375px) {
+    .our-team {
+        margin: 5rem 0;
+    }
+
+    .card {
+        padding: 0;
+        margin: 0;
+        width: 100%;
+    }
+
+    .card > img {
+        border-radius: 0px;
+        width: 100%;
+    }
+}
+
+/* Contact Section */
+
+.contact-us {
+    text-align: center;
+    color: rgb(55, 100, 109);
+    display: flex;
+    align-items: center;
+}
+
+.contact-title {
+    width: 50%;
+    text-align: right;
+    padding-right: 10rem;
+}
+
+.contact-title > h3 {
+    font-size: 4rem;
+    font-weight: 400;
+}
+
+address {
+    font-style: normal;
+    font-size: 1.3rem;
+    font-weight: 400;
+}
+
+.enquiry {
+    width: 50%;
+    padding-left: 10rem;
+    border-left: solid 1px;
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.enquiry > h5 {
+    font-size: 2rem;
+    font-weight: 400;
+}
+
+.enquiry > form {
+    font-size: 1.5rem;
+    font-weight: 300;
+}
+
+form > input, form > textarea {
+    height: 1rem;
+    width: 50%;
+    padding: 1rem;
+    font-size: 1rem;
+    margin: 0.1rem 0 1.5rem 0;
+    border: 0;
+}
+
+button {
+    background-color: rgb(55, 100, 109);
+    border: 0;
+    color: #fff;
+    font-size: 1.1rem;
+    font-family: 'Jost', sans-serif;
+    padding: 0.8rem;
+}
+
+button:hover {
+    cursor: pointer;
+    background-color: rgba(55, 100, 109, 0.808);
+}
+
+/* Media Queries: Contact */
+
+@media only screen and (max-width: 2559px) {
+    .contact-us {
+        margin-bottom: 4rem;
+    }
+} 
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    .contact-title {
+        padding-right: 3.5rem;
+    }
+
+    .enquiry {
+        padding-left: 3.5rem;
+    }
+
+    form > input, form > textarea {
+        width: 70%;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .contact-us {
+        flex-direction: column;
+    }
+
+    .contact-title {
+        padding-right: 0;
+    }
+
+    .contact-title, .enquiry {
+        width: 100%;
+        text-align: center;
+        margin: 0 auto;
+    }
+
+    .enquiry {
+        border: 0;
+        padding: 0;
+        margin-top: 5rem;
+    }
+
+    form > input, form > textarea {
+        width: 80%;
+    }
+}
+
+@media only screen and (max-width: 375px) {
+    .contact-title > h3, .enquiry > h5 {
+        font-size: 2rem;
+    }
+
+    address {
+        font-size: 1rem; 
+    }
+
+    .enquiry > form {
+        font-size: 1rem;
+        font-weight: 400;
+    }
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    background-color: rgb(55, 100, 109);
+    color: #fff;
+    padding: 1rem;
+}
